@@ -3,7 +3,7 @@ from calculator import Calculator
 
 @pytest.fixture
 def clear_history():
-    """This is line of code is a fixture to clear history before each test."""
+    """This line of code is a fixture to clear history before each test."""
     Calculator.history = []
 
 def test_add(clear_history):
@@ -31,4 +31,5 @@ def test_calculation_history(clear_history):
     Calculator.subtract(8, 6)
     assert len(Calculator.history) == 2
     assert Calculator.get_last_calculation() == "Subtract: 8 - 6 = 2"
+
 
