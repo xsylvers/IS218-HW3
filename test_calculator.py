@@ -19,8 +19,8 @@ def test_multiply(clear_history):
     assert Calculator.get_last_calculation() == "Multiply: 2 * 5 = 10"
 
 def test_divide(clear_history):
-    assert Calculator.divide(10, 2) == 5
-    assert Calculator.get_last_calculation() == "Divide: 10 / 2 = 5"
+    assert Calculator.divide(10, 2) == 5.0
+    assert Calculator.get_last_calculation() == "Divide: 10 / 2 = 5.0"
 
 def test_divide_by_zero(clear_history):
     with pytest.raises(ZeroDivisionError):
